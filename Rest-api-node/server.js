@@ -4,6 +4,8 @@ const bodyParser = require("body-parser");
 const app = express();
 const PORT = process.env.PORT || 3000; // Local Testing Port
 
+app.use(cors());
+
 // Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
